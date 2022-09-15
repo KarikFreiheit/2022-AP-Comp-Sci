@@ -6,6 +6,9 @@ public class main {
         love();
         partridge();
         second();
+        love();
+        doves();
+        partridge();
 
     }
 
@@ -22,7 +25,11 @@ public class main {
     }
 
     public static void second(){
-        System.out.println("On the first day of Christmas,");
+        System.out.println("On the second day of Christmas,");
 
+    }
+
+    public static void doves(){
+        System.out.println("Two turtle doves, and");
     }
 }
