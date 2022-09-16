@@ -31,10 +31,12 @@ public class main {
                 System.out.println("******\n*      \n*      ");
         }
 
+        System.out.println("  ◯  \n /|\\ \n / \\ ");
+        System.out.print("******");
+        System.out.print("**********************************");
         for(int i = 1; i <= stairs; i++) {
             System.out.print("******");
         }
-        System.out.println("**********************************");
     }
 
 
