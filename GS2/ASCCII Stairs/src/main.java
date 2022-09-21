@@ -1,14 +1,13 @@
 public class main {
 
-    public static final int stairs = 5;
-
+    public static final int stairs = 10;
     public static void main(String[] args){
 
         create();
 
     }
     /*
-    1. Increase width
+    1. Put space before stair
     2. Add stair x offset
     3. Add right side
     4.
@@ -25,18 +24,57 @@ public class main {
 
 
 
+        for(int i = (stairs - 1); i >= 0; i--) {
+            for (int j = 0; j <= (i - 1); j++) {
 
-        for(int j = 1; j<= stairs; j++) {
-                System.out.println("  ◯  \n /|\\ \n / \\ ");
-                System.out.println("******\n*      \n*      ");
+                System.out.print("     ");
+
+            }
+            System.out.print("  ◯  ******");
+            edge(i + 1);
+
+
+            for (int k = 0; k <= (i - 1); k++) {
+
+                System.out.print("     ");
+
+            }
+            System.out.print(" /|\\ *");
+            edge(i);
+
+
+
+            for (int l = 0; l <= (i - 1); l++) {
+
+                System.out.print("     ");
+
+            }
+            System.out.print(" / \\ *");
+            edge(i);
         }
 
-        System.out.println("  ◯  \n /|\\ \n / \\ ");
+        // places bottom
+
         System.out.print("******");
-        System.out.print("**********************************");
-        for(int i = 1; i <= stairs; i++) {
-            System.out.print("******");
+        for (int i = 0; i <= (stairs - 1); i++) {
+
+                System.out.print("*****");
+
+
         }
+        System.out.print("*");
+
+    }
+
+
+    public static void edge(int i){
+
+        for (int h = i;  h <= stairs - 1; h++) {
+
+            System.out.print("     ");
+
+        }
+        System.out.println("*");
     }
 
 
