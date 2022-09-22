@@ -26,6 +26,7 @@ public class main {
         b*=-1;
         double answerOne = (b + Math.sqrt((b*b) - (4 * a * c))) / (2 * a);
         double answerTwo = (b - Math.sqrt((b*b) - (4 * a * c))) / (2 * a);
+        System.out.println("Roots:");
         System.out.println(answerOne);
         System.out.println(answerTwo);
 
