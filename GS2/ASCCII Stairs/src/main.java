@@ -1,6 +1,6 @@
 public class main {
 
-    public static final int stairs = 10;
+    public static final int stairs = 500;
     public static void main(String[] args){
 
         create();
