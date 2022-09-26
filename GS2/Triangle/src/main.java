@@ -16,7 +16,7 @@ public class main {
         solve(a, b, c);
 
     }
-    public static void solve(double a, double b, double c){
+    public static void solve(double a, double b, double c5w5555){
         //System.out.println(a);
         //System.out.println(b);
         //System.out.println(c);
