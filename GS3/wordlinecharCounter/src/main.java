@@ -8,14 +8,38 @@ public class main{
 
         int wordCount = 0;
         int lineCount = 0;
-        Scanner input = new Scanner(new File ("file.txt"));
-        while (input.hasNext()){
-            String word = input.next();
+        int charCount = 0;
+        File f = new File ("file.txt");
+
+        Scanner inputLines = new Scanner(f);
+
+        while(inputLines.hasNextLine()){
+            lineCount++;
+            inputLines.nextLine();
+        }
+
+
+        Scanner inputWords = new Scanner(f);
+
+
+        while (inputWords.hasNext()){
+
+            String word = inputWords.next();
             wordCount++;
         }
-        String[] lines = input.toString().split("\\r\\n|\\r|\\n");
-        lineCount = lines.length;
-        System.out.print("Number of words: " + wordCount + "\nNumber of lines: " + lineCount);
+
+        Scanner inputChars = new Scanner(f);
+
+        while (inputChars.hasNext()){
+            String l = inputChars.nextLine();
+            charCount += l.length();
+        }
+
+
+
+
+
+        System.out.print("Number of words: " + wordCount + "\nNumber of lines: " + lineCount + "\nNUmber of Chars: " + charCount);
     }
 
 }
