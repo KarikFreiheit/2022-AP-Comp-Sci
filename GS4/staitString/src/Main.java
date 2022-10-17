@@ -26,7 +26,7 @@ public class Main {
 
 
 
-        /* Attempt #1
+        /* Attempt #1 
         Scanner sc = new Scanner(s);
         int wordCount = 0;
         int length;
