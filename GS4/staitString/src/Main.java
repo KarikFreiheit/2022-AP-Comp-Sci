@@ -5,7 +5,7 @@ public class Main {
 
 
         String s = "this is a string";
-        int a = 2;
+        int a = 5;
 
         stairString(s, a);
 
@@ -18,8 +18,25 @@ public class Main {
     //Output in stair problem
     public static void stairString(String s, int a){
 
+        Scanner sc = new Scanner(s);
+        int length = s.length();
+        int b = s.length();
+
+        for (int j = (length / a); j >= 0; j--){
+            if(s.length() > (length / a)) {
+                s = s.substring(j*a,j * (length / a));
+                System.out.print(s + "\n");
+
+            }else{
+                System.out.print(s);
+            }
 
 
+
+
+
+
+        }
 
 
 
