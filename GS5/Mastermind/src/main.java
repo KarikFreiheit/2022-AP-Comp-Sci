@@ -51,32 +51,10 @@ public class main {
 
             //Gets number correct
 
-            for(int j = 0; j < length; j++) {
-                if(j == 0){
-                    if(inputNumbers[j] == inputNumbers[1] || inputNumbers[j] == inputNumbers[2] || inputNumbers[j] == inputNumbers[3]){
-                        continue;
-                    }
-                }
-                if(j == 1){
-                    if(inputNumbers[j] == inputNumbers[0] || inputNumbers[j] == inputNumbers[2] || inputNumbers[j] == inputNumbers[3]){
-                        continue;
+            for(int j = i; j < length; j++) {
 
-                    }
-                }
-                if(j == 2){
-                    if(inputNumbers[j] == inputNumbers[1] || inputNumbers[j] == inputNumbers[0] || inputNumbers[j] == inputNumbers[3]){
-                        continue;
 
-                    }
-                }
-                if(j == 3){
-                    if(inputNumbers[j] == inputNumbers[1] || inputNumbers[j] == inputNumbers[2] || inputNumbers[j] == inputNumbers[0]){
-                        continue;
-
-                    }
-                }
-
-                if (inputNumbers[j] != randomNumbers[j] && inputNumbers[i] == randomNumbers[j]) {
+                if (inputNumbers[i] == randomNumbers[j]) {
                     digitCorrect++;
                     break;
 
