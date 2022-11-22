@@ -11,27 +11,36 @@ public class Main {
         list.add(3);
         list.add(0);
         list.add(-3);
-        list.add(6);
+        list.add(2);
         list.add(1);
-        System.out.println(list.toString());
+        scaleByK(list);
+
+
+    }
+
+
+    public static void scaleByK(ArrayList<Integer> list){
         ArrayList<Integer> newList = new ArrayList<Integer>();
         int size = list.size();
 
         for(int i = 0; i < size; i++){
-
-            //Removes all negatives and zero from list
             if(list.get(i) <= 0){
                 list.remove(i);
                 size -=1;
             }
+        }
 
-
+        for(int i = (size - 1); i >= 0; i--){
+            //Removes all negatives and zero from list
             for(int j = 0; j < list.get(i); j++){
-                System.out.println(newList.toString());
+
                 newList.add(0, list.get(i));
+
             }
         }
         System.out.println(newList.toString());
 
+
     }
 }
+
