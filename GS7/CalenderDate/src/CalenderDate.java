@@ -11,7 +11,7 @@ public class CalenderDate implements Comparable<CalenderDate> {
         dates.add(new CalenderDate(1995, 3, 6));
         dates.add(new CalenderDate(2022, 2, 3));
         dates.add(new CalenderDate(2003, 6, 7));
-
+        dates.add(new CalenderDate(2003, 6, 5));
         System.out.println(dates);
         Collections.sort(dates);
         System.out.println(dates);
