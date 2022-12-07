@@ -5,7 +5,6 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) {
 
-
         Set<String> set = new HashSet<>();
         set.add("Brain");
         set.add("Car");
@@ -15,11 +14,7 @@ public class Main {
 
         System.out.println(removeEvenLength(set));
 
-
-
-
     }
-
 
     public static Set<String> removeEvenLength(Set<String> set){
         for(Iterator<String> iterator = set.iterator(); iterator.hasNext(); ){
