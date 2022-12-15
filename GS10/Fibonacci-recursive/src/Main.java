@@ -1,25 +1,29 @@
 public class Main {
     public static void main(String[] args) {
-        int n = 50;
-        Fibonacci(n, 0,0, 1);
-    }
-    //Switched to long to increase the number of iterations
+        int n = 6;
+        int value = 1;
+        int oneBack = 1;
+        int twoBack = 0;
+        for(int i = 1; i < n; i++){
 
-    public static long Fibonacci(long n, long inc, long twoBack, long oneBack) {
-        if(inc == 0){
-            System.out.println(0);
-            System.out.println(1);
-            inc = 2;
+
+            System.out.println(value);
+            value = twoBack + oneBack;
+            twoBack = oneBack;
+            oneBack = value;
+
         }
-        long newValue = twoBack + oneBack;
-        twoBack = oneBack;
-        if (inc < n){
-            System.out.println(newValue);
-            inc += 1;
-            return Fibonacci(n, inc, twoBack, newValue);
-        }else
-        {
-            return 0;
-        }
+        System.out.println(Fibonacci(n));
     }
+
+
+    public static long Fibonacci(long n) {
+       if( n <= 1){
+           return n;
+       }else{
+           return Fibonacci(n - 1) + Fibonacci(n - 2);
+       }
+    }
+
+
 }
