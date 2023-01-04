@@ -6,21 +6,17 @@ public class Main {
 
     public static int writeSquares(int n){
 
-            if(n % 2 == 0){
-                System.out.print(n*n + ", ");
-                return writeSquares(n - 1);
-            }else if(n > 1){
-                return writeSquares(n - (n - 1));
-            }
-            else{
-                return 0;
-            }
-
-
-
-
-
-
-
+        if(n < 1) {
+            return 0;
+        }else if( n % 2 == 1){
+            System.out.println(n * n);
+            writeSquares(n - 1);
+        }else {
+            writeSquares(n - 1);
+            System.out.println(n * n);
+        }
+        return 0;
     }
+
+
 }
