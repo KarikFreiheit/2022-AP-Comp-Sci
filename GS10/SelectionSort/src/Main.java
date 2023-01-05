@@ -31,7 +31,6 @@ public class Main {
             System.out.println(temp + " " + max);
             array[k - i - 1] = array[index];
             array[index] = temp;
-
         }
 
         return array;
