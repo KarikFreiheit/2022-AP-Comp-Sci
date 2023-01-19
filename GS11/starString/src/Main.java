@@ -2,7 +2,7 @@
 public class Main {
 
     public static void main(String[] args){
-        starString(3);
+        starString(5);
     }
     public static void starString(int power){
         if(power < 0){
