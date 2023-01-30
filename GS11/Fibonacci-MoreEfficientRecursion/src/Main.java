@@ -8,7 +8,7 @@ public class Main {
         if( n <= 2 ){
             return 1;
         }else{
-            return fib(helper());
+            return fib(n) + helper();
         }
     }
 
