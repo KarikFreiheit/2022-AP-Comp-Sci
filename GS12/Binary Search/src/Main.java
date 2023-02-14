@@ -12,13 +12,13 @@ public class Main {
         while(filesc.hasNextLine()){
             list.add(filesc.nextLine());
         }
-        System.out.println("Input two words one at a time. Press Enter after each entry.");
+        System.out.println("Please input two words one at a time and press Enter after each entry.");
         System.out.println(between(inputsc.nextLine(), inputsc.nextLine(), list));
     }
 
     public static int between(String one, String two, ArrayList<String> list){
         int indexOne = Collections.binarySearch(list, one);
-        int indexTwo = Collections.binarySearch(list, two);s
+        int indexTwo = Collections.binarySearch(list, two);
 
         //Returns 0 if none in between
         if(Math.abs(indexOne - indexTwo) - 1 > 0){
