@@ -6,10 +6,12 @@ public class Main {
 
         Point[] points = {
                 new Point(5, 4),
+                new Point(200, 400),
                 new Point(9, 11),
                 new Point(-5, 4),
                 new Point(5, -4),
-                new Point(52, 4)
+                new Point(52, 4),
+                new Point(2, 4)
         };
 
         Arrays.sort(points, new pointComparator());
