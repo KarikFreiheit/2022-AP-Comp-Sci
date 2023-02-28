@@ -18,7 +18,7 @@ public class User {
     }
 
     public String getUser(){
-        return ("First Name: " + firstName + " Last Name: " + lastName + " ID: " + id + " Grade: " + gradeLetter + ", " + gradePercentage);
+        return String.format("%-20s%-20s%-20s%-20s%-20s\n", firstName, lastName, id, gradeLetter, gradePercentage);
     }
 
 
