@@ -1,6 +1,7 @@
 import java.util.Comparator;
 
 public class PercentComparator implements Comparator<User> {
+    @Override
     public int compare(User u1, User u2){
         if(u1.gradePercentage > u2.gradePercentage){
             return 1;

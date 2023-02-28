@@ -80,7 +80,6 @@ public class Main {
                     Arrays.sort(users, new LastNameComparator().reversed());
                 case 3:
                     Arrays.sort(users, new IDComparator().reversed());
-                    System.out.println(2);
                 case 4:
                     Arrays.sort(users, new PercentComparator().reversed());
             }
