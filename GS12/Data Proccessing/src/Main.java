@@ -17,12 +17,12 @@ public class Main {
 
         for(int i = 0; i < length; i++){
             String[] array = ussc.nextLine().split(" ");
-            User user = new User(array[0], array[1], Integer.valueOf(array[2]), Float.valueOf(array[3]), array[4].charAt(0));
+            User user = new User(array[0], array[1], Integer.parseInt(array[2]), Float.valueOf(array[3]), array[4].charAt(0));
             users[i] = user;
         }
 
         System.out.println("Before: \n");
-        System.out.printf("%-20s%-20s%-20s%-20s%-20s\n", "First Name", "Last Name:", " ID", " Grade Letter", "Grade %");
+        System.out.printf("%-20s%-20s%-20s%-20s%-20s\n", "First Name", "Last Name:", "ID", "Grade Letter", "Grade %");
 
         for(int i = 0; i < length; i++){
             System.out.println(users[i].getUser());
@@ -31,7 +31,7 @@ public class Main {
         getUserInput(users);
 
         System.out.println("After: \n");
-        System.out.printf("%-20s%-20s%-20s%-20s%-20s\n", "First Name", "Last Name:", " ID", " Grade Letter", "Grade %");
+        System.out.printf("%-20s%-20s%-20s%-20s%-20s\n", "First Name", "Last Name:", "ID", "Grade Letter", "Grade %");
         for(int i = 0; i < length; i++){
             System.out.println(users[i].getUser());
         }
@@ -63,25 +63,25 @@ public class Main {
     public static void sort(int one, int two, User[] users){
         if(two == 1) {
             switch (one) {
-                case (1):
+                case 1:
                     Arrays.sort(users, new FirstNameComparator());
-                case (2):
+                case 2:
                     Arrays.sort(users, new LastNameComparator());
-                case (3):
+                case 3:
                     Arrays.sort(users, new IDComparator());
-                case (4):
+                case 4:
                     Arrays.sort(users, new PercentComparator());
             }
         }else{
-            switch (two) {
-
-                case (1):
+            switch (one) {
+                case 1:
                     Arrays.sort(users, new FirstNameComparator().reversed());
-                case (2):
+                case 2:
                     Arrays.sort(users, new LastNameComparator().reversed());
-                case (3):
+                case 3:
                     Arrays.sort(users, new IDComparator().reversed());
-                case (4):
+                    System.out.println(2);
+                case 4:
                     Arrays.sort(users, new PercentComparator().reversed());
             }
         }
