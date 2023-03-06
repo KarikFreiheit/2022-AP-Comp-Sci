@@ -30,11 +30,8 @@ public class Main {
 
         getUserInput(users);
 
-        System.out.println("After: \n");
-        System.out.printf("%-20s%-20s%-20s%-20s%-20s\n", "First Name", "Last Name:", "ID", "Grade Letter", "Grade %");
-        for(int i = 0; i < length; i++){
-            System.out.println(users[i].getUser());
-        }
+
+
 
 
 
@@ -45,8 +42,11 @@ public class Main {
         System.out.println("Options: 1. First Name 2. Last Name 3. User ID 4. Grade Percentage");
 
         Scanner userInput = new Scanner(System.in);
+
         System.out.print("Input Number to Choose: ");
         int inputOne = userInput.nextInt();
+        System.out.println(inputOne);
+
         if(inputOne > 4 || inputOne < 1){
             getUserInput(users);
         }
@@ -54,6 +54,7 @@ public class Main {
 
         System.out.print("Input Number to Choose: ");
         int inputTwo = userInput.nextInt();
+        System.out.println(inputTwo);
         if(inputTwo > 2 || inputTwo < 1){
             getUserInput(users);
         }
@@ -65,24 +66,48 @@ public class Main {
             switch (one) {
                 case 1:
                     Arrays.sort(users, new FirstNameComparator());
+                    printArray(users);
+                    break;
                 case 2:
                     Arrays.sort(users, new LastNameComparator());
+                    printArray(users);
+                    break;
                 case 3:
                     Arrays.sort(users, new IDComparator());
+                    printArray(users);
+                    break;
                 case 4:
                     Arrays.sort(users, new PercentComparator());
+                    printArray(users);
+                    break;
             }
         }else{
             switch (one) {
                 case 1:
                     Arrays.sort(users, new FirstNameComparator().reversed());
+                    printArray(users);
+                    break;
                 case 2:
                     Arrays.sort(users, new LastNameComparator().reversed());
+                    printArray(users);
+                    break;
                 case 3:
                     Arrays.sort(users, new IDComparator().reversed());
+                    printArray(users);
+                    break;
                 case 4:
                     Arrays.sort(users, new PercentComparator().reversed());
+                    printArray(users);
+                    break;
             }
+        }
+    }
+
+    public static void printArray(User[] users) {
+        System.out.println("After: \n");
+        System.out.printf("%-20s%-20s%-20s%-20s%-20s\n", "First Name", "Last Name:", "ID", "Grade Letter", "Grade %");
+        for (int i = 0; i < users.length; i++) {
+            System.out.println(users[i].getUser());
         }
     }
 
