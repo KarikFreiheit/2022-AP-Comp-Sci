@@ -30,27 +30,14 @@ public class Main {
                     min = array[j];
                     minindex = j;
                 }
-
-
             }
 
 
 
             //Move the new max to the i less than the end then move the replaced element to where the new max was
             int tempmax = array[k - i - 1];
-
-            //if max is already in its spot don't swap it
-            if(tempmax != max){
-                //System.out.println(tempmax + " " + max);
-                array[k - i - 1] = array[maxindex];
-                array[maxindex] = tempmax;
-
-            }else{
-                System.out.println("Same Max");
-
-            }
-
-
+            array[k - i - 1] = array[maxindex];
+            array[maxindex] = tempmax;
 
 
             //Move the new min to the i less than the end then move the replaced element to where the new min was
@@ -59,13 +46,13 @@ public class Main {
             //if min is already in its spot don't swap it
             if(tempmin != min){
 
+                System.out.println("Same Min");
+
+
+            }else{
                 //System.out.println(tempmin + " " + min);
                 array[i] = array[minindex];
                 array[minindex] = tempmin;
-
-            }else{
-                System.out.println("Same Min");
-
             }
 
 
