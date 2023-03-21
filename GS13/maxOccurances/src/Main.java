@@ -12,6 +12,7 @@ public class Main {
         list.add(25);
         list.add(20);
 
+        //Finds # of occurrences per item
         Map<Integer, Integer> map = new HashMap<>();
         for (int i : list) {
             if(map.containsKey(i)){
@@ -21,6 +22,7 @@ public class Main {
             }
         }
         System.out.println(map);
+        //Finds int with most occurrences
         int max = 0;
         for(int i : map.values()){
             if(i > max){
