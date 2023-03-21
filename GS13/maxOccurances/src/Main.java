@@ -12,6 +12,12 @@ public class Main {
         list.add(25);
         list.add(20);
 
+        System.out.println(maxOccurrences(list));
+    }
+    public static int maxOccurrences(ArrayList<Integer> list){
+        if(list.size() == 0){
+            return 0;
+        }
         //Finds # of occurrences per item
         Map<Integer, Integer> map = new HashMap<>();
         for (int i : list) {
@@ -21,7 +27,7 @@ public class Main {
                 map.put(i, 1);
             }
         }
-        System.out.println(map);
+
         //Finds int with most occurrences
         int max = 0;
         for(int i : map.values()){
@@ -29,7 +35,7 @@ public class Main {
                 max = i;
             }
         }
-        System.out.println(max);
+        return max;
 
 
 
