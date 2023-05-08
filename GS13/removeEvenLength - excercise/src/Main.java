@@ -13,7 +13,7 @@ public class Main {
         ArrayList<String> list2 = new ArrayList<>();
         for(String s : list){
             if(s.length() % 2 != 0){
-                list.add(s);
+                list2.add(s);
             }
         }
         System.out.println(list2);
