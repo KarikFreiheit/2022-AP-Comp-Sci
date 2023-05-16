@@ -8,10 +8,8 @@ public class Main {
         Scanner sc = new Scanner(new File("src\\words"));
         while(sc.hasNextLine()){
             String next = sc.nextLine();
-            //map.put(next,toCanon(next));
             list.add(next);
         }
-        System.out.println(list);
         Collections.sort(list, new canonComp());
         System.out.println(list);
 
